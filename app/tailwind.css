@@ -1,12 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+@layer base {
+  :root {
+    --avocado-1: #fcfdfa;
+    --avocado-2: #f8faf3;
+    --avocado-3: #eef6dc;
+    --avocado-4: #e2efc7;
+    --avocado-5: #d5e6b0;
+    --avocado-6: #c5da96;
+    --avocado-7: #b0c875;
+    --avocado-8: #95b23e;
+    --avocado-9: #748d1f;
+    --avocado-10: #688006;
+    --avocado-11: #607800;
+    --avocado-12: #323c17;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+    --azure-1: #fcfdfe;
+    --azure-2: #f6faff;
+    --azure-3: #ebf3fe;
+    --azure-4: #dcebff;
+    --azure-5: #cae1ff;
+    --azure-6: #b5d5ff;
+    --azure-7: #9dc3f6;
+    --azure-8: #79abec;
+    --azure-9: #0061c2;
+    --azure-10: #0052b1;
+    --azure-11: #0a66c7;
+    --azure-12: #0f315b;
+
+    --bronze-1: #fdfcfc;
+    --bronze-2: #fdf8f6;
+    --bronze-3: #f8f1ee;
+    --bronze-4: #f2e8e4;
+    --bronze-5: #eaddd7;
+    --bronze-6: #e0cec7;
+    --bronze-7: #d1b9b0;
+    --bronze-8: #bfa094;
+    --bronze-9: #a18072;
+    --bronze-10: #977669;
+    --bronze-11: #846358;
+    --bronze-12: #43302b;
+
+    --brown-1: #fefdfc;
+    --brown-2: #fcf9f6;
+    --brown-3: #f8f1ea;
+    --brown-4: #f4e9dd;
+    --brown-5: #efddcc;
+    --brown-6: #e8cdb5;
+    --brown-7: #ddb896;
+    --brown-8: #d09e72;
+    --brown-9: #ad7f58;
+    --brown-10: #a07653;
+    --brown-11: #886349;
+    --brown-12: #3f2c22;
+
+    --cyan-1: #fafdfe;
+    --cyan-2: #f2fcfd;
+    --cyan-3: #e7f9fb;
+    --cyan-4: #d8f3f6;
+    --cyan-5: #c4eaef;
+    --cyan-6: #aadee6;
+    --cyan-7: #84cdda;
+    --cyan-8: #3db9cf;
+    --cyan-9: #05a2c2;
+    --cyan-10: #0894b3;
+    --cyan-11: #0c7792;
+    --cyan-12: #04313c;
+
+    --danger-1: #fffcfc;
+    --danger-2: #fff7f7;
+    --danger-3: #ffebe9;
+    --danger-4: #ffdcd8;
+    --danger-5: #ffcdc8;
+    --danger-6: #ffbdb8;
+    --danger-7: #f6a9a3;
+    --danger-8: #ed8e88;
+    --danger-9: #df3a40;
+    --danger-10: #d12632;
+    --danger-11: #cf2833;
+    --danger-12: #661619;
+
+    --failure-1: #fffcfc;
+    --failure-2: #fff7f7;
+    --failure-3: #ffebe9;
+    --failure-4: #ffdcd8;
+    --failure-5: #ffcdc8;
+    --failure-6: #ffbdb8;
+    --failure-7: #f6a9a3;
+    --failure-8: #ed8e88;
+    --failure-9: #df3a40;
+    --failure-10: #d12632;
+    --failure-11: #cf2833;
+    --failure-12: #661619;
+
+    --gold-1: #fdfdfc;
+    --gold-2: #fbf9f2;
+    --gold-3: #f5f2e9;
+    --gold-4: #eeeadd;
+    --gold-5: #e5dfd0;
+    --gold-6: #dad1bd;
+    --gold-7: #cbbda4;
+    --gold-8: #b8a383;
+    --gold-9: #978365;
+    --gold-10: #8c795d;
+    --gold-11: #776750;
+    --gold-12: #3b352b;
+
+    --grass-1: #fbfefb;
+    --grass-2: #f3fcf3;
+    --grass-3: #ebf9eb;
+    --grass-4: #dff3df;
+    --grass-5: #ceebcf;
+    --grass-6: #b7dfba;
+    --grass-7: #97cf9c;
+    --grass-8: #65ba75;
+    --grass-9: #46a758;
+    --grass-10: #3d9a50;
+    --grass-11: #297c3b;
+    --grass-12: #1b311e;
+
+    --gray-1: #ffffff;
+    --gray-2: #f8f8f8;
+    --gray-3: #f3f3f3;
+    --gray-4: #ededed;
+    --gray-5: #e8e8e8;
+    --gray-6: #e2e2e2;
+    --gray-7: #dbdbdb;
+    --gray-8: #c7c7c7;
+    --gray-9: #8f8f8f;
+    --gray-10: #858585;
+    --gray-11: #6f6f6f;
+    --gray-12: #171717;
+
+    --indigo-1: #fdfdfe;
+    --indigo-2: #f8faff;
+    --indigo-3: #f0f4ff;
+    --indigo-4: #e6edfe;
+    --indigo-5: #d9e2fc;
+    --indigo-6: #c6d4f9;
+    --indigo-7: #aec0f5;
+    --indigo-8: #8da4ef;
+    --indigo-9: #3e63dd;
+    --indigo-10: #3a5ccc;
+    --indigo-11: #3451b2;
+    --indigo-12: #101d46;
+
+    --info-1: #fbfdff;
+    --info-2: #f5faff;
+    --info-3: #edf6ff;
+    --info-4: #e1f0ff;
+    --info-5: #cee7fe;
+    --info-6: #b7d9f8;
+    --info-7: #96c7f2;
+    --info-8: #5eb0ef;
+    --info-9: #0091ff;
+    --info-10: #0081f1;
+    --info-11: #006adc;
+    --info-12: #00254d;
+
+    --orange-1: #fefcfb;
+    --orange-2: #fef8f4;
+    --orange-3: #fff1e7;
+    --orange-4: #ffe8d7;
+    --orange-5: #ffdcc3;
+    --orange-6: #ffcca7;
+    --orange-7: #ffb381;
+    --orange-8: #fa934e;
+    --orange-9: #f76808;
+    --orange-10: #ed5f00;
+    --orange-11: #bd4b00;
+    --orange-12: #451e11;
+
+    --purple-1: #fefcfe;
+    --purple-2: #fdfaff;
+    --purple-3: #f9f1fe;
+    --purple-4: #f3e7fc;
+    --purple-5: #eddbf9;
+    --purple-6: #e3ccf4;
+    --purple-7: #d3b4ed;
+    --purple-8: #be93e4;
+    --purple-9: #8e4ec6;
+    --purple-10: #8445bc;
+    --purple-11: #793aaf;
+    --purple-12: #2b0e44;
+
+    --red-1: #fffcfc;
+    --red-2: #fff7f7;
+    --red-3: #ffebe9;
+    --red-4: #ffdcd8;
+    --red-5: #ffcdc8;
+    --red-6: #ffbdb8;
+    --red-7: #f6a9a3;
+    --red-8: #ed8e88;
+    --red-9: #df3a40;
+    --red-10: #d12632;
+    --red-11: #cf2833;
+    --red-12: #661619;
+
+    --success-1: #fbfefc;
+    --success-2: #f2fcf5;
+    --success-3: #e9f9ee;
+    --success-4: #ddf3e4;
+    --success-5: #ccebd7;
+    --success-6: #b4dfc4;
+    --success-7: #92ceac;
+    --success-8: #5bb98c;
+    --success-9: #30a46c;
+    --success-10: #299764;
+    --success-11: #18794e;
+    --success-12: #153226;
+
+    --teal-1: #fafefd;
+    --teal-2: #f1fcfa;
+    --teal-3: #e7f9f5;
+    --teal-4: #d9f3ee;
+    --teal-5: #c7ebe5;
+    --teal-6: #afdfd7;
+    --teal-7: #8dcec3;
+    --teal-8: #53b9ab;
+    --teal-9: #12a594;
+    --teal-10: #0e9888;
+    --teal-11: #067a6f;
+    --teal-12: #10302b;
+
+    --violet-1: #fdfcfe;
+    --violet-2: #fbfaff;
+    --violet-3: #f5f2ff;
+    --violet-4: #ede9fe;
+    --violet-5: #e4defc;
+    --violet-6: #d7cff9;
+    --violet-7: #c4b8f3;
+    --violet-8: #aa99ec;
+    --violet-9: #6e56cf;
+    --violet-10: #644fc1;
+    --violet-11: #5746af;
+    --violet-12: #20134b;
+
+    --warning-1: #fefdfb;
+    --warning-2: #fff9ed;
+    --warning-3: #fff4d5;
+    --warning-4: #ffecbc;
+    --warning-5: #ffe3a2;
+    --warning-6: #ffd386;
+    --warning-7: #f3ba63;
+    --warning-8: #ee9d2b;
+    --warning-9: #ffba3a;
+    --warning-10: #ffae1a;
+    --warning-11: #ad5700;
+    --warning-12: #4e2009;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
   }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  /* * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  } */
+}
+
+@layer base {
+  /* * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  } */
 }
